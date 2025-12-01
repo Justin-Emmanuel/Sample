@@ -1,76 +1,176 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gesture Navbar</title>
+  <title>Car Care | Home</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+    nav a {
+      color: #00AEEF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      text-align: center;
+    }
+    .overlay h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="service.html">Service Page</a>
+  </nav>
+
+  <div class="hero">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2017/08/06/11495-231626987_large.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay">
+      <h1>Premium Car Care & Detailing</h1>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- service.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Care | Services</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      transition: background 0.4s ease;
+      padding: 0;
+      background: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
-
-    /* NAVBAR */
-    .nav {
+    nav {
+      width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       gap: 20px;
       padding: 20px;
-      background: #111;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
     }
-
-    .nav a {
-      padding: 12px 22px;
-      border-radius: 14px;
+    nav a {
+      color: #00AEEF;
       text-decoration: none;
-      font-size: 18px;
-      color: white;
-      background: #333;
-      transition: transform 0.25s ease, background 0.3s ease;
-    }
-
-    /* Gesture effect */
-    .nav a:hover {
-      transform: scale(1.15) rotate(3deg);
-      background: #555;
-    }
-
-    /* Content */
-    .box {
-      margin-top: 80px;
-      text-align: center;
-      font-size: 32px;
       font-weight: bold;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 38px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #00AEEF;
+    }
+    .card img {
+      width: 80px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-  <div class="nav">
-    <a href="?page=red">Red</a>
-    <a href="?page=blue">Blue</a>
-    <a href="?page=green">Green</a>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="#">Services</a>
+  </nav>
+
+  <h1>Our Services</h1>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Car Wash</h3>
+    </div>
+    <div class="card">
+      <h3>Interior Vacuum</h3>
+    </div>
+    <div class="card">
+      <h3>Teflon Coating</h3>
+    </div>
+    <div class="card">
+      <h3>Engine Bay Cleaning</h3>
+    </div>
+    <div class="card">
+      <h3>Interior Shampooing</h3>
+    </div>
+    <div class="card">
+      <h3>Tyre & Alloy Cleaning</h3>
+    </div>
+    <div class="card">
+      <h3>Polishing</h3>
+    </div>
+    <div class="card">
+      <h3>Underbody Wash</h3>
+    </div>
   </div>
-
-  <div class="box" id="topicBox">Pick a navigation</div>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const page = params.get("page");
-    const box = document.getElementById("topicBox");
-
-    if (page === "red") {
-      document.body.style.background = "red";
-      box.textContent = "This is RED page";
-    } else if (page === "blue") {
-      document.body.style.background = "blue";
-      box.textContent = "This is BLUE page";
-    } else if (page === "green") {
-      document.body.style.background = "green";
-      box.textContent = "This is GREEN page";
-    }
-  </script>
 
 </body>
 </html>
