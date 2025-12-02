@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Services | Pro Car Care</title>
+    <meta name="description" content="Professional mechanical services including diagnostics, repairs, maintenance, and performance upgrades.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-scroll-container>
+    <div class="page-transition-overlay"></div>
+    
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" aria-label="Main navigation">
+                <div class="logo">
+                    <lottie-player
+                        src="https://assets2.lottiefiles.com/packages/lf20_kmfqgq6p.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 50px; height: 50px;"
+                        loop
+                        autoplay
+                        class="logo-animation">
+                    </lottie-player>
+                    <span class="logo-text">Pro Car Care</span>
+                </div>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="mechanical.html" class="nav-link active" role="menuitem">Mechanical</a></li>
+                    <li role="none"><a href="detailing.html" class="nav-link" role="menuitem">Detailing</a></li>
+                    <li role="none"><a href="modifications.html" class="nav-link" role="menuitem">Modifications</a></li>
+                    <li role="none"><a href="accessories.html" class="nav-link" role="menuitem">Accessories</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link cta-button" role="menuitem">Contact / Book Now</a></li>
+                </ul>
+                
+                <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero mechanical-hero" id="main-content">
+        <div class="container">
+            <h1 class="page-title">Mechanical Services</h1>
+            <p class="page-subtitle">Precision engineering and expert repairs for optimal performance</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="page-services">
+        <div class="container">
+            <div class="services-grid detailed">
+                <div class="service-detail-card" data-scroll data-scroll-speed="0.5">
+                    <div class="service-icon-3d large">
+                        <iconify-icon icon="mdi:engine" width="60" height="60"></iconify-icon>
+                    </div>
+                    <h3>Engine Diagnostics & Repair</h3>
+                    <p>Comprehensive engine analysis using advanced diagnostic equipment to identify and fix issues efficiently.</p>
+                    <ul class="service-features">
+                        <li>Computerized diagnostics</li>
+                        <li>Timing belt replacement</li>
+                        <li>Head gasket repair</li>
+                        <li>Engine rebuilds</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-scroll data-scroll-speed="0.5">
+                    <div class="service-icon-3d large">
+                        <iconify-icon icon="mdi:car-brake-abs" width="60" height="60"></iconify-icon>
+                    </div>
+                    <h3>Brake System Services</h3>
+                    <p>Complete brake system inspection, repair, and replacement for maximum safety and performance.</p>
+                    <ul class="service-features">
+                        <li>Brake pad replacement</li>
+                        <li>Rotor resurfacing</li>
+                        <li>ABS system repair</li>
+                        <li>Brake fluid flush</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-scroll data-scroll-speed="0.5">
+                    <div class="service-icon-3d large">
+                        <iconify-icon icon="mdi:car-suspension" width="60" height="60"></iconify-icon>
+                    </div>
+                    <h3>Suspension & Steering</h3>
+                    <p>Professional suspension tuning and steering system repairs for optimal handling and comfort.</p>
+                    <ul class="service-features">
+                        <li>Shock absorber replacement</li>
+                        <li>Wheel alignment</li>
+                        <li>Power steering repair</li>
+                        <li>Control arm replacement</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-scroll data-scroll-speed="0.5">
+                    <div class="service-icon-3d large">
+                        <iconify-icon icon="mdi:car-electric" width="60" height="60"></iconify-icon>
+                    </div>
+                    <h3>Electrical Systems</h3>
+                    <p>Expert diagnosis and repair of vehicle electrical systems, from battery to advanced electronics.</p>
+                    <ul class="service-features">
+                        <li>Battery testing & replacement</li>
+                        <li>Alternator repair</li>
+                        <li>Wiring harness repair</li>
+                        <li>Lighting system upgrades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need Mechanical Services?</h2>
+            <p>Schedule a diagnostic appointment with our expert technicians</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Book Diagnostic</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <lottie-player
+                        src="https://assets2.lottiefiles.com/packages/lf20_kmfqgq6p.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 40px; height: 40px;"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                    <span>Pro Car Care</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="mechanical.html">Mechanical</a>
+                    <a href="detailing.html">Detailing</a>
+                    <a href="modifications.html">Modifications</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; 2024 Pro Car Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
