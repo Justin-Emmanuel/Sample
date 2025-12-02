@@ -1,176 +1,261 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Care | Home</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-    }
-    nav {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-      padding: 20px;
-      background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
-      z-index: 10;
-    }
-    nav a {
-      color: #00AEEF;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .hero video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 40px;
-      background: rgba(255,255,255,0.12);
-      border-radius: 20px;
-      backdrop-filter: blur(15px);
-      text-align: center;
-    }
-    .overlay h1 {
-      margin: 0;
-      font-size: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Car Care | Premium Automotive Services</title>
+    <meta name="description" content="Professional car care, mechanical services, detailing, modifications, and accessories. Premium automotive services with cutting-edge technology.">
+    <meta property="og:title" content="Pro Car Care | Premium Automotive Services">
+    <meta property="og:description" content="Professional car care, mechanical services, detailing, modifications, and accessories.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lottie Player CDN -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Iconify Icons CDN -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
-<body>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#services">Services</a>
-    <a href="service.html">Service Page</a>
-  </nav>
+<body data-scroll-container>
+    <div class="page-transition-overlay"></div>
+    
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" aria-label="Main navigation">
+                <!-- Logo (Replace with actual PNG or Lottie JSON) -->
+                <div class="logo">
+                    <!-- OPTION 1: Replace this Lottie animation with your JSON -->
+                    <!-- LOTTIE_JSON_PLACEHOLDER: replace data-src with your Lottie JSON file -->
+                    <lottie-player
+                        src="https://assets2.lottiefiles.com/packages/lf20_kmfqgq6p.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 50px; height: 50px;"
+                        loop
+                        autoplay
+                        class="logo-animation">
+                    </lottie-player>
+                    
+                    <!-- OPTION 2: Uncomment for PNG logo -->
+                    <!--
+                    <img src="assets/placeholder-logo.png" alt="Pro Car Care Logo" class="logo-img" width="150">
+                    -->
+                    
+                    <span class="logo-text">Pro Car Care</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
+                    <li role="none"><a href="mechanical.html" class="nav-link" role="menuitem">Mechanical</a></li>
+                    <li role="none"><a href="detailing.html" class="nav-link" role="menuitem">Detailing</a></li>
+                    <li role="none"><a href="modifications.html" class="nav-link" role="menuitem">Modifications</a></li>
+                    <li role="none"><a href="accessories.html" class="nav-link" role="menuitem">Accessories</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link cta-button" role="menuitem">Contact / Book Now</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-  <div class="hero">
-    <video autoplay muted loop>
-      <source src="https://cdn.pixabay.com/video/2017/08/06/11495-231626987_large.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay">
-      <h1>Premium Car Care & Detailing</h1>
-    </div>
-  </div>
-</body>
-</html>
+    <!-- Hero Section -->
+    <section class="hero" id="main-content">
+        <!-- Video Background -->
+        <!-- HERO_VIDEO_CDN: replace src with your mp4 CDN link -->
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-fallback.jpg">
+            <source src="https://cdn.coverr.co/videos/coverr-a-mechanic-working-on-a-car-39/1080p.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Fallback Image -->
+        <div class="hero-fallback"></div>
+        
+        <!-- Particle/Grain Layer -->
+        <div class="particle-layer" id="particles"></div>
+        
+        <!-- Glassmorphism Overlay -->
+        <div class="glass-overlay">
+            <div class="container">
+                <h1 class="hero-title">Premium Automotive Care</h1>
+                <p class="hero-subtitle">Cutting-edge technology meets expert craftsmanship for your vehicle</p>
+                <div class="hero-cta">
+                    <a href="contact.html#book" class="btn btn-primary" data-modal-trigger>Book Now</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services</h2>
+            <p class="section-subtitle">Experience excellence in every detail</p>
+            
+            <div class="services-grid">
+                <a href="mechanical.html" class="service-card">
+                    <div class="service-icon-3d">
+                        <!-- ICON_CDN_PLACEHOLDER: replace with your preferred icon -->
+                        <iconify-icon icon="mdi:wrench" width="48" height="48"></iconify-icon>
+                    </div>
+                    <h3>Mechanical Services</h3>
+                    <p>Advanced diagnostics, repairs, and maintenance using state-of-the-art equipment</p>
+                </a>
+                
+                <a href="detailing.html" class="service-card">
+                    <div class="service-icon-3d">
+                        <iconify-icon icon="mdi:car-wash" width="48" height="48"></iconify-icon>
+                    </div>
+                    <h3>Premium Detailing</h3>
+                    <p>Showroom-quality cleaning, polishing, and protection services</p>
+                </a>
+                
+                <a href="modifications.html" class="service-card">
+                    <div class="service-icon-3d">
+                        <iconify-icon icon="mdi:car-sports" width="48" height="48"></iconify-icon>
+                    </div>
+                    <h3>Performance Modifications</h3>
+                    <p>Custom tuning, exhaust systems, and performance upgrades</p>
+                </a>
+                
+                <a href="accessories.html" class="service-card">
+                    <div class="service-icon-3d">
+                        <iconify-icon icon="mdi:car-convertible" width="48" height="48"></iconify-icon>
+                    </div>
+                    <h3>Accessories & Styling</h3>
+                    <p>Enhance your vehicle with premium accessories and custom styling</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- service.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Care | Services</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0d0d0d;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-    nav {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-      padding: 20px;
-      background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
-    }
-    nav a {
-      color: #00AEEF;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    h1 {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 38px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-      border-color: #00AEEF;
-    }
-    .card img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
+    <!-- Isometric Infographic -->
+    <section class="infographic">
+        <div class="container">
+            <h2 class="section-title">State-of-the-Art Facility</h2>
+            <p class="section-subtitle">Our workshop blueprint</p>
+            
+            <!-- SVG_PLACEHOLDER: Replace this SVG with your custom isometric blueprint -->
+            <div class="blueprint-container" data-scroll data-scroll-speed="1">
+                <svg class="blueprint-svg" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Replace this entire SVG with your custom isometric blueprint design -->
+                    <rect x="50" y="150" width="200" height="100" rx="10" class="bay" data-scroll data-scroll-class="fade-in"/>
+                    <rect x="300" y="100" width="200" height="150" rx="10" class="lift" data-scroll data-scroll-class="fade-in"/>
+                    <rect x="550" y="180" width="200" height="70" rx="10" class="wash-bay" data-scroll data-scroll-class="fade-in"/>
+                    <circle cx="650" cy="100" r="40" class="teflon-station" data-scroll data-scroll-class="fade-in"/>
+                    
+                    <text x="150" y="200" class="bay-label">Service Bays</text>
+                    <text x="400" y="175" class="lift-label">Hydraulic Lifts</text>
+                    <text x="650" y="215" class="wash-label">Wash Bay</text>
+                    <text x="650" y="80" class="teflon-label">Teflon Station</text>
+                </svg>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="legend-color bay"></span>
+                    <span>Service Bays (4)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color lift"></span>
+                    <span>Hydraulic Lifts (2)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color wash-bay"></span>
+                    <span>Wash Bay</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color teflon-station"></span>
+                    <span>Teflon Coating Station</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="#">Services</a>
-  </nav>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Vehicle?</h2>
+            <p>Book your appointment today and experience premium automotive care</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Book Your Service</a>
+        </div>
+    </section>
 
-  <h1>Our Services</h1>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <lottie-player
+                        src="https://assets2.lottiefiles.com/packages/lf20_kmfqgq6p.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 40px; height: 40px;"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                    <span>Pro Car Care</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="mechanical.html">Mechanical</a>
+                    <a href="detailing.html">Detailing</a>
+                    <a href="modifications.html">Modifications</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; 2024 Pro Car Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Car Wash</h3>
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3>Book Your Service</h3>
+            <p>Contact us to schedule your appointment:</p>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                <p><strong>Email:</strong> <a href="mailto:bookings@procarcare.com">bookings@procarcare.com</a></p>
+                <p><strong>Hours:</strong> Mon-Fri 8am-6pm, Sat 9am-4pm</p>
+            </div>
+            <a href="contact.html" class="btn btn-primary">View Full Contact Info</a>
+        </div>
     </div>
-    <div class="card">
-      <h3>Interior Vacuum</h3>
-    </div>
-    <div class="card">
-      <h3>Teflon Coating</h3>
-    </div>
-    <div class="card">
-      <h3>Engine Bay Cleaning</h3>
-    </div>
-    <div class="card">
-      <h3>Interior Shampooing</h3>
-    </div>
-    <div class="card">
-      <h3>Tyre & Alloy Cleaning</h3>
-    </div>
-    <div class="card">
-      <h3>Polishing</h3>
-    </div>
-    <div class="card">
-      <h3>Underbody Wash</h3>
-    </div>
-  </div>
 
+    <!-- JavaScript Libraries -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
